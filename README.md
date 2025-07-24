@@ -9,11 +9,11 @@ a little app to retrieve the currently playing Spotify track information, using 
   > Generally: source path/to/venv/bin/activate <br>
   > source venv/bin/activate
 3. Install any needed requirements<br>
-  a. via the requirements file provided
+  1. via the requirements file provided
     > python3 -m pip install -r requirements.txt  <br>    
-    Details about using a requirements file From this [source](https://pip.pypa.io/en/stable/user_guide/#requirements-files) <br>
-  b. or install them individually
-    >   python3 -m pip install xyz
+    (1). Details about using a requirements file From this [source](https://pip.pypa.io/en/stable/user_guide/#requirements-files) <br>
+  2. or install them individually<br>
+    > python3 -m pip install xyz
 4. Go to the Spotify creator [Dashboard](https://developer.spotify.com/dashboard), and set-up the app (see tutorials)
 5. Create a ```.env``` file (no extension).  Inside the file place your keys copied from the Spotify Dashboard:
   > SPOTIFY_ID = "your-id-here" <br>
