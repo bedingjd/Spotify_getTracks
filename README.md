@@ -3,10 +3,10 @@ a little app to retrieve the currently playing Spotify track information, using 
 
 ## Set-up
 1. Create a virtual environment
-  > Generally: python3 -m venv path/to/venv
+  > Generally: python3 -m venv path/to/venv <br>
   > python3 -m venv venv
 2. Activate the virtual environment
-  > Generally: source path/to/venv/bin/activate
+  > Generally: source path/to/venv/bin/activate <br>
   > source venv/bin/activate
 3. Install any needed requirements
   a. via the requirements file provided
@@ -15,7 +15,7 @@ a little app to retrieve the currently playing Spotify track information, using 
     >   python3 -m pip install xyz
 4. Go to the Spotify creator [Dashboard](https://developer.spotify.com/dashboard), and set-up the app (see tutorials)
 5. Create a ```.env``` file (no extension).  Inside the file place your keys copied from the Spotify Dashboard:
-  > SPOTIFY_ID = "<your-key-here>"
+  > SPOTIFY_ID = "<your-key-here>" <br>
   > SPOTIFY_KEY = "<your-key-here>"
 6. Start the flask app
   > python3 spotify-client.py
