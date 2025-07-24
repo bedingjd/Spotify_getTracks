@@ -2,3 +2,4 @@ dotenv
 requests
 flask
 requests_oauthlib
+spotipy
