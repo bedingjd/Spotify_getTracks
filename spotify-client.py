@@ -13,6 +13,7 @@ from dotenv import load_dotenv, find_dotenv
 import os
 import spotipy
 from spotipy.oauth2 import SpotifyOAuth
+import time
 
 app = Flask(__name__)
 
@@ -151,7 +152,17 @@ def show_track():
 def get_token():
     token_info = session.get(TOKEN_INFO, None)
     print(f"Token Info is {token_info}")
-    # TODO
+    if not token_info:
+        raise "exception: no token"
+    now = int(time.time())
+    is_expired = token_info['expires_at'] - now < 60
+    if (is_expired):
+        # get a new token
+        sp_oauth = create_spotify_oauth()
+        token_info = sp_oauth.refresh_access_token(token_info['refresh_token'])
+        # reset the session information with the new token information
+        session[TOKEN_INFO] = token_info
+
     return token_info
 
 
