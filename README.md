@@ -20,6 +20,8 @@ a little app to retrieve the currently playing Spotify track information, using 
   > SPOTIFY_KEY = "your-key-here"
 6. Start the flask app
   > python3 spotify-client.py
+7. Open a browser and navigate to:
+  > http://127.0.0.1:3000/login
 
 
 ## To Run
@@ -27,6 +29,9 @@ a little app to retrieve the currently playing Spotify track information, using 
 > source venv/bin/activate
 - Start the flask app
 > python3 spotify-client.py
+- Open a browser and navigate to:
+  > http://127.0.0.1:3000/login
+
 
 
 ## References
@@ -57,5 +62,5 @@ a little app to retrieve the currently playing Spotify track information, using 
 
 
   ## TO DO
-  - [ ] Format the output so that the information fills the screen, and the background can be removed via chromakey
-  - [ ] Add logic (from Part 3 tutorial) to refresh the token upon expiration
+  - [x] Format the output so that the information fills the screen, and the background can be removed via chromakey
+  - [x] Add logic (from Part 3 tutorial) to refresh the token upon expiration
