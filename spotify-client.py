@@ -98,16 +98,15 @@ def show_track():
         #print(f"The json response is {resp_json}")
 
         track_id = this_resp['item']['id']
-        print(f"\nTrack ID: {track_id}\n")
+        #print(f"\nTrack ID: {track_id}\n")
         track_name = this_resp['item']['name']
         artists = this_resp['item']['artists']
         artist_name = ', '.join([artist['name'] for artist in artists])
         link = this_resp['item']['external_urls']['spotify']
-        print(f"Link is {link}")
+        #print(f"Link is {link}")
         #image = this_resp['item']['images'][0]['url']
         image = this_resp.get('item').get('album').get('images')[0].get('url')
-        #image = "test"
-        print(f"Image is {image}\n")
+        #print(f"Image is {image}\n")
 
         current_track_info = {
             "id": track_id,
