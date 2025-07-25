@@ -150,11 +150,11 @@ def show_track():
 
 def get_token():
     token_info = session.get(TOKEN_INFO, None)
-    print(f"Token Info is {token_info}")
     if not token_info:
         raise "exception: no token"
     now = int(time.time())
-    is_expired = token_info['expires_at'] - now < 60
+    is_expired = (token_info['expires_at'] - now) < 60
+    print(f"\n...Token Info is {token_info}\nExpires in: {token_info['expires_at'] - now}\n")
     if (is_expired):
         # get a new token
         sp_oauth = create_spotify_oauth()
